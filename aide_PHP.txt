@@ -1,0 +1,68 @@
+#############################CARTOUCHE########################################################################
+
+/*
+name: Almir Razic 
+title:
+date: 25.11.2019
+version: 1.0
+*/
+#############################PHP##############################################################################
+
+<?php
+
+?>
+
+#############################liens css########################################################################
+
+<link href="exo2_array_and_string.css" type="text/css" rel="stylesheet">
+
+#############################déclaration de variable##########################################################
+
+$exemple				//toujours mettre un dollars avant la variable
+					//type de la variable implicitement déclaré
+
+#############################écrire du text####################################################################
+
+echo 'exemple';				//affiche exemple sur la page
+echo $value;				//affiche la valeur de value
+
+#############################tableau simple####################################################################
+
+$exemple = array();			//déclare le tableau exemple sans un nombre max de valeurs
+$exemple = array('lun','mar','mer');	//déclare le tableau exemple en indiquant les valeurs
+
+$exemple[0] = 'chat';			//change la valeur de la case 0 en chat
+echo $exemple[0];			//affiche la valeur de exemple [0]
+
+unset $exemple[0];			//unset va suprimer la valeur de exemple[0]
+$exemple[0] = array_values($exemple[0]);//réindexation du tableau
+array_splice($exemple, 1);		//enlève la valeur de exemple[0]
+
+#############################tableau associatif################################################################
+
+$exemple = array(			//déclaration d'un tableau associatif avec des clés ex(admin est une clés)
+ 'admin'=>'chien',
+ 'caisse'=>'chat',
+ 'presse'=>'cheval',
+ 'techn'=>'chèvre'
+);
+
+echo $exemple['caisse'];		//ça va afficher la référence de la clés caisse(chat)
+
+foreach($exemple as $clef =>$element) {
+echo $clef.‘ : ’.$element.'<br>'; 	//affiche toutes les valeurs du tableau associatif (admin : chien)
+}
+
+############################parcourir un tableau###############################################################
+
+$exemple = array('lun','mar','mer');	//déclaration du tableau
+
+for ($i = 0; $i < 2; $i++) {
+echo $exemple[$i].'<br>'; 		//affiche $exemple[0],$exemple[1], etc.
+} 
+
+foreach($jours as $element) {
+echo $element.'<br>'; 			//affichera toutes les valeurs de $jours
+}
+
+################################################################################################
