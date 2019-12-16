@@ -50,77 +50,78 @@ echo '</table>';
         <li class="prev">&#10094;</li>
         <li class="next">&#10095;</li>
         <li>
-            August<br>
-            <span style="font-size:18px">2017</span>
+            <?php
+            $mois = date("F");
+            echo $mois;
+            ?>
+            <br>
+            <span style="font-size:18px">
+                <?php
+                $annee = date("Y");
+                echo $annee;
+                ?>
+            </span>
         </li>
     </ul>
 </div>
 
 <ul class="weekdays">
-    <li>Mo</li>
-    <li>Tu</li>
-    <li>We</li>
-    <li>Th</li>
-    <li>Fr</li>
-    <li>Sa</li>
-    <li>Su</li>
+    <?php
+    $tableau = array(1,2,3,4,5,6,0);
+    $aujourdhui = date("w");
+    ?>
+    <li>Lun</li>
+    <li>Mar</li>
+    <li>Mer</li>
+    <li>Jeu</li>
+    <li>Ven</li>
+    <li>Sam</li>
+    <li>Dim</li>
 </ul>
 
 <ul class="days">
     <?php
+
+    switch ($aujourdhui){
+        case 0:
+            echo '<li></li>';echo '<li></li>';echo '<li></li>';echo '<li></li>';echo '<li></li>';
+            break;
+        case 1:
+            echo '<li></li>';echo '<li></li>';echo '<li></li>';echo '<li></li>';echo '<li></li>';echo '<li></li>';
+            break;
+        case 2:
+            echo "";
+            break;
+        case 3:
+            echo '<li></li>';
+            break;
+        case 4:
+            echo '<li></li>';echo '<li></li>';
+            break;
+        case 5:
+            echo '<li></li>';echo '<li></li>';echo '<li></li>';
+            break;
+        default:
+            echo '<li></li>';echo '<li></li>';echo '<li></li>';echo '<li></li>';
+    }
+
     $jours = date("j");
-    $mois = date("F");
-    for ($q = 1; $q < $jours; $q++) {
+    $nbjours = date("t");
+    for ($q = 1; $q < $nbjours; $q++) {
         /*foreach($jours as $element) {
         echo $element.'<br>'; 			//affichera toutes les valeurs de $jours*/
         if ($q == $jours) {
-            echo '<td class="active">';
+            echo '<li class="td1">';
             echo $q;
+            echo '</li>';
         } else {
-            echo '<td >';
+            echo '<li>';
             echo $q;
-        }
-
-        if ($q == 7 || $q == 14 || $q == 21 || $q == 28) {
-            echo '</td>';
-            echo '</tr>';
+            echo '</li>';
         }
     }
 
     ?>
-    }
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li><span class="active">10</span></li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
-    <li>31</li>
 </ul>
-
 
 </html>
