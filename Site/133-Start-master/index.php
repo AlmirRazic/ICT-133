@@ -16,6 +16,11 @@ if (isset($_GET['action'])){
         case 'contact':
             contact();
             break;
+        case 'login':
+            login($_POST);
+            break;
+        case 'logout':
+            logout($_POST);
         default:
             home();
     }

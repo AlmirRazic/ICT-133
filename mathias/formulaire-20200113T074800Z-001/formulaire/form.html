@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<body>
+    <form action="checkForm.php" method="post">
+        <h1>Formulaire d'inscription</h1><br><br>
+        <label>
+            <input type="radio" name="sex" value="homme">Homme
+            <input type="radio" name="sex" value="femme">Femme
+        </label>
+
+        <br>
+        Nom
+        <input type="text" name="nom">
+        <br>
+        Prénom
+        <input type="text" name="prenom">
+        <br>
+        Camp affilié
+        <input type="text" name="camp">
+        <br>
+        Dates des camps
+        <input type="checkbox" name="date[]" value="00.00.2000">2000
+        <input type="checkbox" name="date[]" value="00.00.2001">2001
+        <input type="checkbox" name="date[]" value="00.00.2002">2002
+        <br>
+
+        <input type="radio" name="bouffe" value="vegetarien">Vegetarien
+        <input type="radio" name="bouffe" value="tout">tout
+        <br>
+
+        <textarea name="text"></textarea>
+        <br>
+
+        <button type="submit">Envoyer</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

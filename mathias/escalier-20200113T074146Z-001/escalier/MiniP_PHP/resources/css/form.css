@@ -1,0 +1,29 @@
+/**
+*   ETML
+*   Auteur :     Jérôme Wassenberg
+*   Date :       05.05.2017
+*   Description: Feuille de style pour la page du formulaire (Insertion & Modification)
+*/
+
+#form{
+    background-color: dodgerblue;
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+#message{
+     color: black;
+     margin: auto;
+     background-color: dodgerblue;
+     width: 400px;
+     height: 100px;
+     text-align: center;
+     margin-top: 30vmin;
+     padding: 10vmin;
+ }
+
+#message p{
+    padding-bottom: 5vmin;
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="762ca65c-bdd5-42a7-bd22-1105ee8a64fb" name="Default Changelist" comment="" />
+    <list default="true" id="54b1cded-ccce-4b51-a249-85afefeb4e4c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,15 +14,13 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
-  <component name="ProjectId" id="1V4Bka8vYnT4DKXZUrVi5xkCHAx" />
+  <component name="ProjectId" id="1WKdZTAU9XRnqflGZ6MIjPefJa9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mathias" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -36,26 +34,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="site" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="762ca65c-bdd5-42a7-bd22-1105ee8a64fb" name="Default Changelist" comment="" />
-      <created>1576502630467</created>
+      <changelist id="54b1cded-ccce-4b51-a249-85afefeb4e4c" name="Default Changelist" comment="" />
+      <created>1578902275455</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576502630467</updated>
-      <workItem from="1576502631546" duration="5285000" />
-      <workItem from="1578295753810" duration="4169000" />
-      <workItem from="1578315123589" duration="2692000" />
-      <workItem from="1578317829338" duration="3679000" />
-      <workItem from="1578900077901" duration="9009000" />
+      <updated>1578902275455</updated>
+      <workItem from="1578902276533" duration="1583000" />
     </task>
     <servers />
   </component>
@@ -67,9 +56,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

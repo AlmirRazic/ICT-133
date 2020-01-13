@@ -1,0 +1,119 @@
+/***** Tag style *****/
+
+body
+{
+    background-color: #ececec;
+    margin: auto;
+    width: 800px;
+    font-family: arial, helvetica, sans-serif;
+}
+
+header, menu, footer, section
+{
+    background-color: #00a6f9;
+    color: black;
+    padding: 0px 0px 0px 20px;
+    width: 100%;
+    float: left;
+}
+
+header
+{
+    border-radius: 50px 100px 0px 0px;
+}
+
+menu
+{
+    margin: 0px;
+    border-radius: 0px 0px 50px 100px;
+}
+
+footer
+{
+    border-radius: 50px 100px 50px 100px;
+}
+
+section
+{
+    background-color: transparent;
+}
+
+a
+{
+    color: black;
+    text-decoration: blink;
+}
+
+th a
+{
+    text-align: center;
+    background-color: #00a6f9;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px #333;
+    padding: 1px 4px;
+    font-size: 13px;
+}
+
+th a:hover
+{
+    background-color: #00a6f9;
+    box-shadow: 1px 1px 4px #333;
+}
+
+th, td
+{
+    text-align: justify;
+}
+
+form, h2
+{
+    margin-left: 20px;
+}
+
+td
+{
+    padding-top: 5px;
+}
+
+/***** Id style *****/
+
+#input
+{
+    border: none;
+    margin-top: 10px;
+}
+
+/***** Class style *****/
+
+.menu
+{
+    float: left;
+    margin: 0px 0px 10px 10px;
+    padding: 5px 10px;
+    background-color: #00a6f9;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+.menu:hover ,.button:hover
+{
+    background-color: #00a6f9;
+    box-shadow: 2px 2px 8px #333;
+}
+
+.button
+{
+    float: left;
+    text-align: center;
+    background-color: #00a6f9;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px #333;
+    margin: 0px 20px 20px 0px;
+    padding: 5px 10px;
+}
+
+.button:hover
+{
+    background-color: #00a6f9;
+    box-shadow: 1px 1px 4px #333;
+}

@@ -68,9 +68,24 @@
                         </button>
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
-                                <li class="active"><a href="/index.html">Home</a></li>
-                                <li><a href="/about.html">About</a></li>
-                                <li class="dropdown">
+                                <!--<li class="active"><a href="/index.php">Acceuil</a></li>-->
+                                <li <?php if ($_GET['action']=="home") : ?>
+                                    class="active"
+                                <?php endif ?>>
+                                    <a href="/index.php?action=home">Acceuil</a>
+                                </li>
+                                <li <?php if ($_GET['action']=="login") : ?>
+                                    class="active"
+                                <?php endif ?>>
+                                    <a href="/index.php?action=login">login</a>
+                                </li>
+                                <li <?php if ($_GET['action']=="logout") : ?>
+                                    class="active"
+                                <?php endif ?>>
+                                    <a href="/index.php?action=home">logout</a>
+                                </li>
+                                <!--<li><a href="/about.html">About</a></li>-->
+                                <!--<li class="dropdown">
                                     <a href="/page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/view/content/site/full.html">Full Page</a></li>
@@ -86,10 +101,10 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                </li>
-                                <li><a href="/view/content/site/services.html">Services</a></li>
-                                <li><a href="/view/content/site/portfolio.html">Portfolio</a></li>
-                                <li><a href="/view/content/site/contact.php">Contact</a></li>
+                                </li>-->
+                                <!--<li><a href="/index.php?action=login">login</a></li>-->
+                                <li><a href="/view/content/site/portfolio.html">Produit</a></li>
+                                <!--<li><a href="/view/content/site/contact.php">Contact</a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -102,25 +117,25 @@
             <div class="span12">
 
                 <div id="headerSeparator"></div>
-
+<?php if(($_GET['action']=="home") || (!isset($_GET['action'])) ) : ?>
                 <div class="camera_full_width">
                     <div id="camera_wrap">
-                        <div data-src="slider-images/4.jpg">
+                        <div data-src="/view/content/site/slider-images/4.jpg">
                             <div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à
                                 disposition.
                             </div>
                         </div>
-                        <div data-src="slider-images/1.jpg">
+                        <div data-src="/view/content/site/slider-images/1.jpg">
                             <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des
                                 sensations.
                             </div>
                         </div>
-                        <div data-src="slider-images/2.jpg"></div>
+                        <div data-src="/view/content/site/slider-images/2.jpg"></div>
                     </div>
                     <br style="clear:both"/>
                     <div style="margin-bottom:40px"></div>
                 </div>
-
+<?php endif ?>
                 <div id="headerSeparator2"></div>
 
             </div>
@@ -245,20 +260,20 @@
 </div>
 <br/><br/><br/>
 
-<script src="view/content/scripts/jquery.min.js" type="text/javascript"></script>
-<script src="view/content/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="view/content/scripts/default.js" type="text/javascript"></script>
+<script src="/view/content/site/scripts/jquery.min.js" type="text/javascript"></script>
+<script src="/view/content/site/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/view/content/site/scripts/default.js" type="text/javascript"></script>
 
 
-<script src="view/content/scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
+<script src="/view/content/site/scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
 <script type="text/javascript">$('#list_photos').carouFredSel({
         responsive: true,
         width: '100%',
         scroll: 2,
         items: {width: 320, visible: {min: 2, max: 6}}
     });</script>
-<script src="view/content/scripts/camera/scripts/camera.min.js" type="text/javascript"></script>
-<script src="view/content/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/view/content/site/scripts/camera/scripts/camera.min.js" type="text/javascript"></script>
+<script src="/view/content/site/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
 <script type="text/javascript">function startCamera() {
         $('#camera_wrap').camera({
             fx: 'scrollLeft',

@@ -1,0 +1,17 @@
+/**
+*   ETML
+*   Auteur :     Jérôme Wassenberg
+*   Date :       05.05.2017
+*   Description: Feuille de style de la page Login.php
+*/
+#form_login{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    padding: 5vmin;
+}
+
+input{
+    margin: 1vmin;
+}
