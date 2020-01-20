@@ -23,8 +23,7 @@ function home(){
  *
  */
 function login($post){
-    $_GET['action']="login";
-    /*$_GET['action']="psw";*/
+    $_POST['action']="login";
 
     require "model/model.php";
     $login=@$_POST['login'];
@@ -56,6 +55,20 @@ function logout($post)
     session_destroy();
 }
 
+function register($post)
+{
+
+    require "model/model.php";
+
+    if (isset($post))
+    {
+        checkuserlog($post);
+        require "view/home.php";
+    }else
+    {
+        require "view/register.php";
+    }
+}
 
 
 

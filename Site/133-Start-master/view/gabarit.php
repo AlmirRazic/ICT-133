@@ -84,6 +84,12 @@
                                 <?php endif ?>>
                                     <a href="/index.php?action=home">logout</a>
                                 </li>
+                                <li <?php if ($_GET['action']=="register") : ?>
+                                    class="active"
+                                <?php endif ?>>
+                                    <a href="/index.php?action=register">register</a>
+                                </li>
+
                                 <!--<li><a href="/about.html">About</a></li>-->
                                 <!--<li class="dropdown">
                                     <a href="/page.html" class="dropdown-toggle">Page <b class="caret"></b></a>

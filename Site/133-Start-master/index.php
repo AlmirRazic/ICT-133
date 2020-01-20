@@ -21,6 +21,10 @@ if (isset($_GET['action'])){
             break;
         case 'logout':
             logout($_POST);
+            break;
+        case 'register':
+            register($_POST);
+            break;
         default:
             home();
     }
