@@ -18,21 +18,28 @@ function checkLogin($post){
 
 function checkuserlog($post)
 {
-    if(isset($post['login']) && ($post['pwd']))
+    if(isset($post['login']) && ($post['psw']))
     {
-        $userdata = array();
-        $userdata['name'] = $post['login'];
-        $userdata['password'] = $post['pwd'];
+       /* $userdata = array();*/
+
 
         $fichier = file_get_contents('model/Users.json');
 
-        $fichier = json_encode($fichier, true);
+        $fichier = json_decode($fichier, true);
 
-        $fichier[] = $userdata;
+        $userdata['name'] = $post['login'];
+        $userdata['password'] = $post['psw'];
+
+        $fichier{0} = $userdata;
 
         $fichier = json_encode($fichier);
 
         file_put_contents('model/Users.json', $fichier);
+
+
+           
+
+
     }else
     {
         require "view/register.php";
