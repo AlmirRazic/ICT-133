@@ -14,19 +14,20 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="b5d63ad0-0464-4722-b46b-d93733cccedd" name="localhost" port="8080" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1V4Bka8vYnT4DKXZUrVi5xkCHAx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mathias" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mathias" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
@@ -68,6 +69,7 @@
       <workItem from="1578900077901" duration="9732000" />
       <workItem from="1579508548398" duration="67000" />
       <workItem from="1579508630476" duration="10342000" />
+      <workItem from="1580069483460" duration="2941000" />
     </task>
     <servers />
   </component>

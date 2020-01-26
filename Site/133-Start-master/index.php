@@ -6,7 +6,6 @@ date: 16.12.2019
 version: 1.0
 */
 require_once "controler/controler.php";
-session_start();
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {

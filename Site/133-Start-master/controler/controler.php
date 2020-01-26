@@ -9,6 +9,7 @@ version: 1.0
 Function to redirect the user to the home page
 (depending the action received by th index)
 */
+session_start();
 require_once "model/model.php";
 function home()
 {
@@ -34,13 +35,11 @@ function trylogin()
         foreach ($uservar as $user) {
 
             {
-
-
                 if ($_POST['login'] == $user["name"] && $_POST['psw'] == $user["password"]) {
                     $_SESSION['login'] = $_POST['login'];
-                }
 
-                home();
+                    require "view/home.php";
+                }
             }
 
 
@@ -48,6 +47,7 @@ function trylogin()
     } else {
         login();
     }
+return $_SESSION;
 }
 
 /*_*/

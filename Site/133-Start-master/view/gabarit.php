@@ -84,7 +84,7 @@
                                 ?>
                                 <li><a href="index.php?action=home">acceuil</a></li>
                                 <li><a href="index.php?action=Snows">Snows</a></li>
-                                <li><a href="view/content/site/portfolio.html">Produit</a></li>
+                               <!-- <li><a href="view/content/site/portfolio.html">Produit</a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -132,10 +132,10 @@
                 <?= $content; ?>
                 <!--End Main Content-->
             </div>
-
+        </div>
             <div id="footerInnerSeparator"></div>
         </div>
-    </div>
+
 
     <div id="footerOuterSeparator"></div>
 

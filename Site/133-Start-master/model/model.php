@@ -15,7 +15,9 @@ function getSnows()
 {
     return json_decode(file_get_contents("model/snows.json"),true);
 }
-/*function checkLogin()
+
+
+function checkLogin()
 {
 
     $uservar = file_get_contents('model/Users.json');
@@ -33,7 +35,7 @@ function getSnows()
     } else {
         login();
     }
-}*/
+}
 
 function checkuserlog($post)
 {
