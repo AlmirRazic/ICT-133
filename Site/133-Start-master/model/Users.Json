@@ -1,1 +1,42 @@
-[{"name":"wwwww","password":"wwwwwwwwwwww"}]
+[
+  {
+    "name": "test2",
+    "password": "test2"
+  },
+  {
+    "name": "fabien",
+    "password": "fabien"
+  },
+  {
+    "name": "test",
+    "password": "test"
+  },
+  {
+    "name": "ok",
+    "password": "ok"
+  },
+  {
+    "name": "lk",
+    "password": "lk"
+  },
+  {
+    "name": "chien",
+    "password": "oui"
+  },
+  {
+    "name": "he",
+    "password": "he"
+  },
+  {
+    "name": "mn",
+    "password": "mn"
+  },
+  {
+    "name": "$$",
+    "password": "$$"
+  },
+  {
+    "name": "yay",
+    "password": "yay"
+  }
+]

@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 /*
 name: Almir Razic
 title:
@@ -11,83 +9,83 @@ version: 1.0
 Function to redirect the user to the home page
 (depending the action received by th index)
 */
-
-function home(){
-    $_GET['action']="home";
-    require "view/home.php";
+require_once "model/model.php";
+function home()
+{
+    $_GET['action'] = "home";
+    require_once "view/home.php";
 }
 
+function login()
+{
 
+    require_once 'view/login.php';
+}
 
 /**
  *
  */
-function login($post){
-    $_POST['action']="login";
+function trylogin()
+{
+    $uservar = getUsers();
 
-    require "model/model.php";
-    $login=@$_POST['login'];
-    $psw=@$_POST['psw'];
+    if (isset($_POST['login'])) {
 
-    if (isset($post))
-    {
-        if (checkLogin($post))
-        {
-            $_SESSION['login'] = $post['login'];
-            echo $_SESSION['login'];
+        foreach ($uservar as $user) {
+
+            {
+
+
+                if ($_POST['login'] == $user["name"] && $_POST['psw'] == $user["password"]) {
+                    $_SESSION['login'] = $_POST['login'];
+                }
+
+                home();
+            }
+
+
         }
-        require "view/login.php";
-    }else
-    {
-        require "view/login.php";
+    } else {
+        login();
     }
 }
-/*_*/
-function logout($post)
-{
-    // Call sestion
-    session_start();
 
+/*_*/
+function logout()
+{
 // Erase the session tab
     session_unset();
-
 // Destroy section to logout
     session_destroy();
+    home();
 }
 
-function register($post)
+function register()
 {
+    require_once 'view/register.php';
+}
 
-    require "model/model.php";
+function account()
+{
+    require_once 'view/account.php';
+}
+function snows()
+{
+    $snows = getSnows();
+    require_once 'view/snows.php';
+}
 
-    if (isset($post))
-    {
+function tryregister()
+{
+    require_once "model/model.php";
+    $post = $_POST;
+    if (isset($post)) {
         checkuserlog($post);
-        require "view/home.php";
-    }else
-    {
-        require "view/register.php";
+        $_SESSION['login'] = $_POST['login'];
+        home();
+    } else {
+        require_once "view/register.php";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

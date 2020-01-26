@@ -8,13 +8,9 @@ version: 1.0
 
 // tampon de flux stocké en mémoire
 ob_start();
-$titre= "Rent A Snow - login";
+$titre = "Rent A Snow - login";
 ?>
-<form action="index.php?action=login" method="post" >
-    <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
+<form action="index.php?action=trylogin" method="post">
     <div class="container">
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="login" required>
@@ -36,9 +32,5 @@ $titre= "Rent A Snow - login";
 </form>
 <?php
 $content = ob_get_clean();
-require "gabarit.php";
-
-
+require_once "gabarit.php";
 ?>
-
-

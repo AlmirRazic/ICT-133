@@ -5,11 +5,11 @@ title:
 date: 16.12.2019
 version: 1.0
 */
-require "controler/controler.php";
-
-if (isset($_GET['action'])){
+require_once "controler/controler.php";
+session_start();
+if (isset($_GET['action'])) {
     $action = $_GET['action'];
-    switch ($action){
+    switch ($action) {
         case 'home' :
             home();
             break;
@@ -17,37 +17,30 @@ if (isset($_GET['action'])){
             contact();
             break;
         case 'login':
-            login($_POST);
+            login();
+            break;
+        case 'trylogin':
+            trylogin();
             break;
         case 'logout':
-            logout($_POST);
+            logout();
             break;
         case 'register':
-            register($_POST);
+            register();
+            break;
+        case 'tryregister':
+            tryregister();
+            break;
+        case 'account':
+            account();
+            break;
+        case 'Snows':
+            snows();
             break;
         default:
             home();
     }
-}else{
+} else {
     home();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

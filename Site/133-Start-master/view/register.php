@@ -6,9 +6,9 @@ version: 1.0
 */-->
 <?php
 ob_start();
-$titre= "Rent A Snow - register";
+$titre = "Rent A Snow - register";
 ?>
-<form action="index.php?action=register" method="post" >
+<form action="index.php?action=tryregister" method="post">
 
     <div class="container">
         <label for="uname"><b>Username</b></label>
@@ -22,7 +22,7 @@ $titre= "Rent A Snow - register";
 </form>
 <?php
 $content = ob_get_clean();
-require "gabarit.php";
+require_once "gabarit.php";
 
 
 ?>

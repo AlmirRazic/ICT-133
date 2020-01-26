@@ -17,14 +17,18 @@
     <![endif]-->
 
     <!-- Icons -->
-    <link href="view/content/site/scripts/icons/general/stylesheets/general_foundicons.css" media="screen" rel="stylesheet"
+    <link href="view/content/site/scripts/icons/general/stylesheets/general_foundicons.css" media="screen"
+          rel="stylesheet"
           type="text/css"/>
-    <link href="view/content/site/scripts/icons/social/stylesheets/social_foundicons.css" media="screen" rel="stylesheet"
+    <link href="view/content/site/scripts/icons/social/stylesheets/social_foundicons.css" media="screen"
+          rel="stylesheet"
           type="text/css"/>
     <!--[if lt IE 8]>
-    <link href="view/content/site/scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen" rel="stylesheet"
+    <link href="view/content/site/scripts/icons/general/stylesheets/general_foundicons_ie7.css" media="screen"
+          rel="stylesheet"
           type="text/css"/>
-    <link href="view/content/site/scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen" rel="stylesheet"
+    <link href="view/content/site/scripts/icons/social/stylesheets/social_foundicons_ie7.css" media="screen"
+          rel="stylesheet"
           type="text/css"/>
     <![endif]-->
     <link rel="stylesheet" href="view/content/site/scripts/fontawesome/css/font-awesome.min.css">
@@ -69,48 +73,18 @@
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
                                 <!--<li class="active"><a href="/index.php">Acceuil</a></li>-->
-                                <li <?php if ($_GET['action']=="home") : ?>
-                                    class="active"
-                                <?php endif ?>>
-                                    <a href="index.php?action=home">Acceuil</a>
-                                </li>
-                                <li <?php if ($_GET['action']=="login") : ?>
-                                    class="active"
-                                <?php endif ?>>
-                                    <a href="index.php?action=login">login</a>
-                                </li>
-                                <li <?php if ($_GET['action']=="logout") : ?>
-                                    class="active"
-                                <?php endif ?>>
-                                    <a href="index.php?action=home">logout</a>
-                                </li>
-                                <li <?php if ($_GET['action']=="register") : ?>
-                                    class="active"
-                                <?php endif ?>>
-                                    <a href="index.php?action=register">register</a>
-                                </li>
-
-                                <!--<li><a href="/about.html">About</a></li>-->
-                                <!--<li class="dropdown">
-                                    <a href="/page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/view/content/site/full.html">Full Page</a></li>
-                                        <li><a href="/view/content/site/2-column.html">Two Column</a></li>
-                                        <li><a href="/view/content/site/3-column.html">Three Column</a></li>
-                                        <li><a href="/view/content/site/documentation/index.html">Documentation</a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle">Dropdown Item &nbsp;&raquo;</a>
-                                            <ul class="dropdown-menu sub-menu">
-                                                <li><a href="#">Dropdown Item</a></li>
-                                                <li><a href="#">Dropdown Item</a></li>
-                                                <li><a href="#">Dropdown Item</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>-->
-                                <!--<li><a href="/index.php?action=login">login</a></li>-->
+                                <?php
+                                if (isset($_SESSION['login'])) {
+                                    echo '<li><a href="index.php?action=logout">Logout</a></li>';
+                                    echo '<li><a href="index.php?action=account">Account</a></li>';
+                                } else {
+                                    echo '<li><a href="index.php?action=login">Login</a></li>';
+                                    echo '<li><a href="index.php?action=register">Register</a></li>';
+                                }
+                                ?>
+                                <li><a href="index.php?action=home">acceuil</a></li>
+                                <li><a href="index.php?action=Snows">Snows</a></li>
                                 <li><a href="view/content/site/portfolio.html">Produit</a></li>
-                                <!--<li><a href="/view/content/site/contact.php">Contact</a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -123,25 +97,25 @@
             <div class="span12">
 
                 <div id="headerSeparator"></div>
-<?php if(($_GET['action']=="home") || (!isset($_GET['action'])) ) : ?>
-                <div class="camera_full_width">
-                    <div id="camera_wrap">
-                        <div data-src="view/content/site/slider-images/4.jpg">
-                            <div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à
-                                disposition.
+                <?php if (($_GET['action'] == "home") || (!isset($_GET['action']))) : ?>
+                    <div class="camera_full_width">
+                        <div id="camera_wrap">
+                            <div data-src="view/content/site/slider-images/4.jpg">
+                                <div class="camera_caption fadeFromBottom cap1">Les derniers modèles toujours à
+                                    disposition.
+                                </div>
                             </div>
-                        </div>
-                        <div data-src="view/content/site/slider-images/1.jpg">
-                            <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des
-                                sensations.
+                            <div data-src="view/content/site/slider-images/1.jpg">
+                                <div class="camera_caption fadeFromBottom cap2">Découvrez des paysages fabuleux avec des
+                                    sensations.
+                                </div>
                             </div>
+                            <div data-src="view/content/site/slider-images/2.jpg"></div>
                         </div>
-                        <div data-src="view/content/site/slider-images/2.jpg"></div>
+                        <br style="clear:both"/>
+                        <div style="margin-bottom:40px"></div>
                     </div>
-                    <br style="clear:both"/>
-                    <div style="margin-bottom:40px"></div>
-                </div>
-<?php endif ?>
+                <?php endif ?>
                 <div id="headerSeparator2"></div>
 
             </div>
@@ -155,7 +129,7 @@
 
             <div class="row-fluid">
                 <!--Edit Main Content Area here-->
-                <?=$content; ?>
+                <?= $content; ?>
                 <!--End Main Content-->
             </div>
 
